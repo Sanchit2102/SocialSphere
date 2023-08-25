@@ -1,0 +1,48 @@
+.RightSide{
+ display: flex;  
+ flex-direction: column;
+ gap:2rem; 
+}
+
+.navIcons{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+
+}
+
+.navIcons>a>img,.navIcons>img{
+width: 1.5rem;
+height: 1.5rem;
+}
+
+.TrendCard{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    background: var(--cardColor);
+    padding: 1rem;
+    border-radius: 1rem;
+    padding-left: 2rem;
+}
+
+.Trend{
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.Trend>span:first-child{
+    font-weight: bold;
+}
+
+
+.Trend>span:nth-child(2){
+    font-size: 13px;
+}
+
+.r-btn{
+height: 3rem;
+width: 80%;
+align-self: center;
+}
