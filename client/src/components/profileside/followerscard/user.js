@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { followUser, unfollowUser } from '../../../action/UserAction.js';
 import Profile from '../../../img/profileImg.png'
 import Message from '../../../img/comment.png'
-import { addChat } from '../../../api/ChatRequest.js';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
