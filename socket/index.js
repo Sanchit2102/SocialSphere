@@ -9,7 +9,7 @@ app.use(cors())
 
 const io = require("socket.io")(8800, {
   cors: {
-    origin: "https://your-frontend-domain.onrender.com",
+    origin: FRONTEND,
     methods: ["GET", "POST"],
     credentials: true
   }
