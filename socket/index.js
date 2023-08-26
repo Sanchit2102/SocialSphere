@@ -1,12 +1,19 @@
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+const express = require("express");
 dotenv.config();
 const FRONTEND = process.env.FRONTEND;
 
+const app = express();
+app.use(cors())
+
+
 const io = require("socket.io")(8800, {
-    cors: {
-      origin: "http://localhost:3000",FRONTEND
-    },
-  });
+  cors: {
+    origin: "https://your-frontend-domain.onrender.com",
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
   
   let activeUsers = [];
   
