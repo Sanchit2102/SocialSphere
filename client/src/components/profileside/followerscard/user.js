@@ -28,7 +28,7 @@ const handleFollow = () => {
 };
 
 const handleClick =async()=>{
-  const { data } = await axios.post('/chat', {
+  const { data } = await axios.post('https://socialsphere-lxw6.onrender.com/chat', {
     senderId: user._id,
     receiverId: person._id
   });
