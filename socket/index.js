@@ -1,14 +1,16 @@
 const dotenv = require("dotenv");
 const express = require("express");
+const cors = require("cors");
 
 dotenv.config();
 const FRONTEND = process.env.FRONTEND;
 
 const app = express();
+app.use(cors());
 
 const io = require("socket.io")(8800, {
   cors: {
-    origin: FRONTEND,
+    origins: FRONTEND,
   },
 });
 
@@ -42,3 +44,7 @@ io.on("connection", (socket) => {
     io.emit("get-users", activeUsers);
   });
 });
+
+app.listen(3003,()=>{
+  console.log("server running on port 3003")
+})
